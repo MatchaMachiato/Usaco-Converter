@@ -18,3 +18,23 @@
 
 - Sau mỗi lần tạo 1 folder hay file sẽ có thông báo (dù chưa dừng lại đọc do chưa thêm tính năng)
 - Sau khi chuyển thành công cũng sẽ có thông báo "CONVERT SUCESSFULLY" (nhưng cũng không dừng lại đọc)
+
+
+--Update CSES Crawler--
+
+--CSES TEST CRAWLER--
+
+- Dùng để lấy test từ 1 bài CSES bất kì thông qua html
+
+
+Cách dùng
+
+- Ở mỗi bài ta cần nộp một lần. Sau đó ở trang kết quả, inspect trang và lấy source html ở trang đó.
+
+- Patse source đó vào 1 file text.txt
+
+- Chỉnh chỉ mục download ở trình duyệt mặc định thành nơi muốn lưu file
+
+- Chạy chương trình
+
+- Sẽ chạy ra định dạng như usaco
