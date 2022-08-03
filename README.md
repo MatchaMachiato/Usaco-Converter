@@ -13,3 +13,8 @@
 - Phần "Location of file want to convert: ", nhập vào path đi đến nơi bộ test cần chuyển, *lưu ý không nhập thừ dấu gạch ở cuối
 
 - Phần "Destination of the converted file: ", nhập vào vị trí mà bạn muốn bộ test được lưu
+
+--Output--
+
+- Sau mỗi lần tạo 1 folder hay file sẽ có thông báo (dù chưa dừng lại đọc do chưa thêm tính năng)
+- Sau khi chuyển thành công cũng sẽ có thông báo "CONVERT SUCESSFULLY" (nhưng cũng không dừng lại đọc)
