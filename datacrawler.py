@@ -64,8 +64,30 @@ def createTextFile(s):
 
 def openfile(i):
 	
-	inpfile = open('D:/USACO CONVERTER/CSES/test_input.txt', 'r')
-	outfile = open('D:/USACO CONVERTER/CSES/test_output.txt', 'r')
+	INPlocation = 'D:/USACO CONVERTER/CSES/test_input.txt'
+	OUTlocation = 'D:/USACO CONVERTER/CSES/test_output.txt'
+
+	print("Wating for: 0 ", end = '')
+	second = 0
+	while not(os.path.exists(INPlocation)):
+		second += 1
+		print(second, end = ' ')
+		time.sleep(1)
+		if (second == 10): break
+
+	print()
+
+	print("Wating for: 0 ", end = '')
+	second = 0
+	while not(os.path.exists(OUTlocation)):
+		second += 1
+		print(second, end = ' ')
+		time.sleep(1)
+		if (second == 10): break
+
+	print()
+	inpfile = open(INPlocation, 'r')
+	outfile = open(OUTlocation, 'r')
 
 	s = 'D:/USACO CONVERTER/CSES_download'
 	createFile(s)
@@ -86,7 +108,6 @@ def openfile(i):
 	inpfile.close()
 	outfile.close()
 
-	# sleep(1)
 	os.remove('D:/USACO CONVERTER/CSES/test_input.txt')
 	os.remove('D:/USACO CONVERTER/CSES/test_output.txt')
 
@@ -102,6 +123,5 @@ def main():
 	n = len(inp)
 	for i in range(n):
 		down(i)
-		time.sleep(2)
 		openfile(i)
 main()
