@@ -5,16 +5,7 @@ import os
 global inp
 global out
 
-def get(s, l, r):
-	ans = ""
-	while l <= r:
-		ans = ans + s[l]
-		l += 1
-	
-	return ans;
-
 def check(s):
-	
 	n = len(s)
 	t = s[n - 2]
 	if (t == '1'):
@@ -28,20 +19,16 @@ def check(s):
 	if (t == '2'):
 		out.append(s)
 
-
-
-
 def process(s):
 	n = len(s)
-	for i in range(n):
-		if i + 4 < n:
-			if get(s, i, i + 4) == '/file':
-				ans = "https://cses.fi"
-				while s[i] != "\"":
-					ans = ans + s[i]
-					i += 1
+	for i in range(n - 4):
+		if s[i:i + 5] == '/file':
+			ans = "https://cses.fi"
+			while s[i] != "\"":
+				ans = ans + s[i]
+				i += 1
 
-				check(ans)
+			check(ans)
 
 def access(s):
 	webbrowser.open(s)
@@ -54,12 +41,12 @@ def down(i):
 def createFile(s):
 	if (not(os.path.isdir(s))):
 		os.mkdir(s)
-		print("Create " + s + " sucessfully!")
+		print("Create", s, "sucessfully!")
 
 def createTextFile(s):
 	if (not(os.path.isdir(s))):
 		x = open(s, 'w')
-		print("Create " + s + " sucessfully!")
+		print("Create", s, "sucessfully!")
 		x.close();
 
 def openfile(i):
